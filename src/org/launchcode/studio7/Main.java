@@ -1,12 +1,26 @@
 package org.launchcode.studio7;
 
+import java.util.ArrayList;
+
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        // TODO: Declare and initialize a CD and a DVD object.
+        ConsoleReader CR = new ConsoleReader();
+        ArrayList<CD> CDs = CR.getCDs();
+        ArrayList<DVD> DVDs = CR.getDVDs();
 
-        // TODO: Call each CD and DVD method to verify that they work as expected.
+        for (CD cd: CDs) {
+            cd.burnDisc();
+            cd.readDisc();
+            cd.spinDisc();
+        }
+
+        for (DVD dvd: DVDs) {
+            dvd.burnDisc();
+            dvd.readDisc();
+            dvd.spinDisc();
+        }
 
     }
 }
